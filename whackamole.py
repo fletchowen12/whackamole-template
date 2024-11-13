@@ -22,6 +22,7 @@ def main():
 
         while running:
             for event in pygame.event.get():
+
                 if event.type == pygame.QUIT:
                     running = False
 
@@ -29,9 +30,6 @@ def main():
                     x, y = event.pos
                     row = x // 32
                     col = y // 32
-                    # print(row,col)
-                    # print(molex,moley)
-                    # print(molex//32,moley//32)
                     if row == molex//32 and col == moley//32:
                         molex = random.randint(0,19) * 32
                         moley = random.randint(0,15) * 32
